@@ -30,8 +30,8 @@ func (k Kernel) HandlerOther(
 		arguments ...interface{},
 	) (result interface{})
 
-	_, ok := outcome.(*DB)
-	if receiver, is := receiver.(*DB); is && ok {
+	_, isDB := outcome.(*DB)
+	if receiver, ok := receiver.(*DB); ok && isDB {
 		return k.handlerDB(receiver, methodName, arguments...)
 	}
 
