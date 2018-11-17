@@ -130,7 +130,7 @@ func (s *DB) HasBlockGlobalUpdate() (ok bool) {
 
 // SingularTable implementation of gorm interface.
 func (s *DB) SingularTable(enable bool) {
-	s.Handler(s, "SingularTable")
+	s.Handler(s, "SingularTable", enable)
 }
 
 // NewScope implementation of gorm interface.
