@@ -19,8 +19,8 @@ type Field = gorm.Field
 // JoinTableHandlerInterface type alias.
 type JoinTableHandlerInterface = gorm.JoinTableHandlerInterface
 
-// Scope type alias.
-type Scope = gorm.Scope
+// Search type alias.
+type Search = interface{}
 
 // SQLCommon type alias.
 type SQLCommon = gorm.SQLCommon

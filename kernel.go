@@ -35,6 +35,11 @@ func (k Kernel) HandlerOther(
 		return k.handlerDB(receiver, methodName, arguments...)
 	}
 
+	_, isScope := outcome.(*Scope)
+	if receiver, ok := receiver.(*DB); ok && isScope {
+		return k.newScope(receiver, methodName, arguments...)
+	}
+
 	rvs := receiver.MethodCalled(methodName, arguments...)
 	if len(rvs) > 0 {
 		reply := rvs[0]
@@ -114,6 +119,47 @@ func (Kernel) handlerDB(
 			return reply.(resolverArgs)(receiver, arguments...)
 		default:
 			panic(fmt.Sprintf("call() unknown type %T", reply))
+		}
+	}
+
+	return outcome
+}
+func (Kernel) newScope(
+	receiver *DB,
+	methodName string,
+	arguments ...interface{},
+) (outcome *Scope) {
+	type resolver = func(receiver *DB) (result *Scope)
+	type resolverArgs = func(
+		receiver *DB,
+		arguments ...interface{},
+	) (result *Scope)
+
+	outcome = &Scope{
+		Foundation: receiver.Foundation,
+		Mock:       receiver.Mock,
+		db:         receiver,
+	}
+	rvs := receiver.MethodCalled(methodName, arguments...)
+	if len(rvs) > 0 {
+		reply := rvs[0]
+		switch reply.(type) {
+		case DB:
+			scope := reply.(Scope)
+			scope.db = receiver
+			outcome = &scope
+		case *Scope:
+			scope := reply.(*Scope)
+			scope.db = receiver
+			outcome = scope
+		case nil:
+			outcome = nil
+		case resolver:
+			return reply.(resolver)(receiver)
+		case resolverArgs:
+			return reply.(resolverArgs)(receiver, arguments...)
+		default:
+			panic(fmt.Sprintf("unknown type %T", reply))
 		}
 	}
 
