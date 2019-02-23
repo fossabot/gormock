@@ -1,4 +1,4 @@
-package gormock
+package comp
 
 import (
 	"github.com/jinzhu/gorm"

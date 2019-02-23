@@ -3,29 +3,29 @@
 package linker
 
 import (
-	"github.com/xorcare/gormock"
+	"github.com/xorcare/gormock/comp"
 )
 
 // DB link to mock.
-type DB = gormock.DB
+type DB = comp.DB
 
 // Association type alias.
-type Association = gormock.Association
+type Association = comp.Association
 
 // Callback type alias.
-type Callback = gormock.Callback
+type Callback = comp.Callback
 
 // Dialect type alias.
-type Dialect = gormock.Dialect
+type Dialect = comp.Dialect
 
 // Field how to handle many2many relations.
-type Field = gormock.Field
+type Field = comp.Field
 
 // JoinTableHandlerInterface type alias.
-type JoinTableHandlerInterface = gormock.JoinTableHandlerInterface
+type JoinTableHandlerInterface = comp.JoinTableHandlerInterface
 
 // Scope type alias.
-type Scope = gormock.Scope
+type Scope = comp.Scope
 
 // SQLCommon type alias.
-type SQLCommon = gormock.SQLCommon
+type SQLCommon = comp.SQLCommon
