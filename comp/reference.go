@@ -4,9 +4,6 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-// Association type alias.
-type Association = gorm.Association
-
 // Callback type alias.
 type Callback = gorm.Callback
 

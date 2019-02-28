@@ -8,7 +8,7 @@ structures.
  * Implement interfaces
     * [x] gorm.DB ≈ comp.DB 
     * [x] gorm.Scope ≈ comp.Scope 
-    * [ ] gorm.Association
+    * [x] gorm.Association ≈ comp.Association
     * [ ] gorm.Callback
     * [ ] gorm.Dialect
     * [ ] gorm.Field
