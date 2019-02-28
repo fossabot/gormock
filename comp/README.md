@@ -13,7 +13,7 @@ structures.
     * [ ] gorm.Dialect
     * [ ] gorm.Field
     * [ ] gorm.JoinTableHandlerInterface
-    * [ ] gorm.Search
+    * [x] gorm.Search ≈ comp.Search
     * [ ] gorm.SQLCommon
 
 ## License
