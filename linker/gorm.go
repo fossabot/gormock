@@ -15,6 +15,9 @@ type Association = gorm.Association
 // Callback type alias.
 type Callback = gorm.Callback
 
+// CallbackProcessor type alias.
+type CallbackProcessor = gorm.CallbackProcessor
+
 // Dialect type alias.
 type Dialect = gorm.Dialect
 

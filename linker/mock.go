@@ -15,6 +15,9 @@ type Association = comp.Association
 // Callback type alias.
 type Callback = comp.Callback
 
+// CallbackProcessor type alias.
+type CallbackProcessor = comp.CallbackProcessor
+
 // Dialect type alias.
 type Dialect = comp.Dialect
 
