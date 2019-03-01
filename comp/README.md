@@ -9,7 +9,7 @@ structures.
     * [x] gorm.DB ≈ comp.DB 
     * [x] gorm.Scope ≈ comp.Scope 
     * [x] gorm.Association ≈ comp.Association
-    * [ ] gorm.Callback
+    * [x] gorm.Callback
     * [x] gorm.CallbackProcessor ≈ comp.CallbackProcessor
     * [ ] gorm.Dialect
     * [ ] gorm.Field

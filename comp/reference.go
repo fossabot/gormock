@@ -4,9 +4,6 @@ import (
 	"github.com/jinzhu/gorm"
 )
 
-// Callback type alias.
-type Callback = gorm.Callback
-
 // Dialect type alias.
 type Dialect = gorm.Dialect
 
