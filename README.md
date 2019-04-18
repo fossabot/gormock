@@ -1,4 +1,6 @@
 # GORMock
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxorcare%2Fgormock.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxorcare%2Fgormock?ref=badge_shield)
+
 
 The fantastic mock for the fantastic [GORM] library, aims to be developer
 friendly.
@@ -29,3 +31,6 @@ library, aims to be developer friendly.'
 to be developer friendly.'
 [LICENSE]: https://git.io/fhHbM 'BSD 3-Clause "New" or "Revised" License'
 [GORMock-examples]: https://git.io/fhAxN 'Examples of using gormock and linker'
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fxorcare%2Fgormock.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fxorcare%2Fgormock?ref=badge_large)
